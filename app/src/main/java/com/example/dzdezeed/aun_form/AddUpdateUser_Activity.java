@@ -1,28 +1,25 @@
 package com.example.dzdezeed.aun_form;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
-    protected Button BSignin;
+public class AddUpdateUser_Activity extends AppCompatActivity {
+    protected Button BOk;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        BSignin = (Button) findViewById(R.id.BSignin);
-
-        WhenClickBSignin();
-
+        setContentView(R.layout.activity_add_update_user);
+        BOk = (Button) findViewById(R.id.BOk);
+        WhenClickBOk();
     }
-    private void WhenClickBSignin() {
-        BSignin.setOnClickListener(new View.OnClickListener() {
+    private void WhenClickBOk() {
+        BOk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,Menu_Activity.class);
+                Intent intent = new Intent(AddUpdateUser_Activity.this,StyledTabsActivity.class);
                 startActivity(intent);
             }
         });

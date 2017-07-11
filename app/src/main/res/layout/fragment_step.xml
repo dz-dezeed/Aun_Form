@@ -20,11 +20,365 @@
             android:padding="16dp"
             tools:text="Tap" />
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="128dp"
-            android:layout_height="52dp"
-            android:text="TextView" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="15dp"
+                    android:text="ข้อมูลทั่วไป"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/textView14"
+                    android:layout_alignStart="@+id/textView14"
+                    android:layout_below="@+id/textView14"
+                    android:layout_marginTop="42dp"
+                    android:text="คำนำหน้าชื่อ" />
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/textView12"
+                    android:layout_alignRight="@+id/textView12"
+                    android:layout_below="@+id/textView12"
+                    android:layout_marginTop="49dp"
+                    android:text="เลขประจำตัว" />
+
+                <EditText
+                    android:id="@+id/editText2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/editText7"
+                    android:layout_alignStart="@+id/editText7"
+                    android:layout_below="@+id/editText7"
+                    android:layout_marginTop="40dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Name" />
+
+                <EditText
+                    android:id="@+id/editText7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/editText6"
+                    android:layout_alignStart="@+id/editText6"
+                    android:layout_below="@+id/editText6"
+                    android:layout_marginTop="99dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Name" />
+
+                <EditText
+                    android:id="@+id/editText6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/editText5"
+                    android:layout_alignStart="@+id/editText5"
+                    android:layout_below="@+id/editText5"
+                    android:layout_marginTop="33dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Name" />
+
+                <EditText
+                    android:id="@+id/editText5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/textView17"
+                    android:layout_alignBottom="@+id/textView17"
+                    android:layout_alignLeft="@+id/editText4"
+                    android:layout_alignStart="@+id/editText4"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Name" />
+
+                <EditText
+                    android:id="@+id/editText4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/textView14"
+                    android:layout_alignBottom="@+id/textView14"
+                    android:layout_centerHorizontal="true"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Name" />
+
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/editText6"
+                    android:layout_alignStart="@+id/editText6"
+                    android:layout_below="@+id/editText6"
+                    android:layout_marginTop="17dp" />
+
+                <Spinner
+                    android:id="@+id/spinner2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/textView13"
+                    android:layout_alignEnd="@+id/editText2"
+                    android:layout_alignLeft="@+id/editText2"
+                    android:layout_alignRight="@+id/editText2"
+                    android:layout_alignStart="@+id/editText2" />
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/textView14"
+                    android:layout_alignRight="@+id/textView14"
+                    android:layout_below="@+id/textView13"
+                    android:layout_marginTop="41dp"
+                    android:text="ชื่อ" />
+
+                <TextView
+                    android:id="@+id/textView20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/spinner"
+                    android:layout_alignEnd="@+id/textView21"
+                    android:layout_alignRight="@+id/textView21"
+                    android:text="วันเกิด" />
+
+                <TextView
+                    android:id="@+id/textView22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/editText7"
+                    android:layout_alignBottom="@+id/editText7"
+                    android:layout_alignEnd="@+id/textView20"
+                    android:layout_alignRight="@+id/textView20"
+                    android:text="อายุ" />
+
+                <TextView
+                    android:id="@+id/textView21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/editText6"
+                    android:layout_alignBottom="@+id/editText6"
+                    android:layout_alignEnd="@+id/textView17"
+                    android:layout_alignRight="@+id/textView17"
+                    android:text="นามสกุล" />
+
+                <TextView
+                    android:id="@+id/textView23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="โทรศัพท์"
+                    android:layout_alignBaseline="@+id/editText2"
+                    android:layout_alignBottom="@+id/editText2"
+                    android:layout_alignRight="@+id/textView13"
+                    android:layout_alignEnd="@+id/textView13" />
+
+                <TextView
+                    android:id="@+id/textView24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="มือถือ"
+                    android:layout_below="@+id/editText2"
+                    android:layout_alignRight="@+id/textView22"
+                    android:layout_alignEnd="@+id/textView22"
+                    android:layout_marginTop="41dp" />
+
+                <TextView
+                    android:id="@+id/textView25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="อีเมล์"
+                    android:layout_below="@+id/textView24"
+                    android:layout_alignLeft="@+id/textView20"
+                    android:layout_alignStart="@+id/textView20"
+                    android:layout_marginTop="78dp" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="24dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="15dp"
+                android:text="ข้อมูลทั่วไป"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView14"
+                android:layout_alignStart="@+id/textView14"
+                android:layout_below="@+id/textView14"
+                android:layout_marginTop="42dp"
+                android:text="คำนำหน้าชื่อ" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/textView12"
+                android:layout_alignRight="@+id/textView12"
+                android:layout_below="@+id/textView12"
+                android:layout_marginTop="49dp"
+                android:text="เลขประจำตัว" />
+
+            <EditText
+                android:id="@+id/editText2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Name"
+                android:layout_below="@+id/editText9"
+                android:layout_alignLeft="@+id/editText9"
+                android:layout_alignStart="@+id/editText9" />
+
+            <EditText
+                android:id="@+id/editText9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/editText8"
+                android:layout_alignStart="@+id/editText8"
+                android:layout_below="@+id/editText8"
+                android:layout_marginTop="33dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Name" />
+
+            <EditText
+                android:id="@+id/editText8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/editText7"
+                android:layout_alignStart="@+id/editText7"
+                android:layout_below="@+id/editText7"
+                android:layout_marginTop="40dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Name" />
+
+            <EditText
+                android:id="@+id/editText7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/editText6"
+                android:layout_alignStart="@+id/editText6"
+                android:layout_below="@+id/editText6"
+                android:layout_marginTop="99dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Name" />
+
+            <EditText
+                android:id="@+id/editText6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/editText5"
+                android:layout_alignStart="@+id/editText5"
+                android:layout_below="@+id/editText5"
+                android:layout_marginTop="33dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Name" />
+
+            <EditText
+                android:id="@+id/editText5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textView17"
+                android:layout_alignBottom="@+id/textView17"
+                android:layout_alignLeft="@+id/editText4"
+                android:layout_alignStart="@+id/editText4"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Name" />
+
+            <EditText
+                android:id="@+id/editText4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textView14"
+                android:layout_alignBottom="@+id/textView14"
+                android:layout_centerHorizontal="true"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Name" />
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/editText6"
+                android:layout_alignStart="@+id/editText6"
+                android:layout_below="@+id/editText6"
+                android:layout_marginTop="17dp" />
+
+            <Spinner
+                android:id="@+id/spinner2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textView13"
+                android:layout_alignEnd="@+id/editText2"
+                android:layout_alignLeft="@+id/editText2"
+                android:layout_alignRight="@+id/editText2"
+                android:layout_alignStart="@+id/editText2" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/textView14"
+                android:layout_alignRight="@+id/textView14"
+                android:layout_below="@+id/textView13"
+                android:layout_marginTop="41dp"
+                android:text="ชื่อ" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/spinner"
+                android:layout_alignEnd="@+id/textView21"
+                android:layout_alignRight="@+id/textView21"
+                android:text="วันเกิด" />
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/editText6"
+                android:layout_alignBottom="@+id/editText6"
+                android:layout_alignEnd="@+id/textView17"
+                android:layout_alignRight="@+id/textView17"
+                android:text="นามสกุล" />
+
+        </RelativeLayout>
+
 
     </FrameLayout>
 

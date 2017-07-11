@@ -17,6 +17,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".StyledTabsActivity" />
+        <activity android:name=".Menu_Activity" />
+        <activity android:name=".History_Activity" />
+        <activity android:name=".AddUpdateUser_Activity"></activity>
     </application>
 
 </manifest>
