@@ -21,20 +21,13 @@ import android.os.Bundle;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.text.Html;
 import android.view.View;
-import android.view.animation.AnimationUtils;
-import android.widget.Button;
-import android.widget.EditText;
 
-import com.example.dzdezeed.aun_form.R;
+import com.example.dzdezeed.aun_form.OnNavigationBarListener;
 import com.stepstone.stepper.Step;
 import com.stepstone.stepper.VerificationError;
-import com.example.dzdezeed.aun_form.OnNavigationBarListener;
 
-import butterknife.Bind;
-
-public class StepFragmentSample extends ButterKnifeFragment implements Step {
+public class StepFragmentSample2 extends ButterKnifeFragment implements Step {
 
     private static final String CLICKS_KEY = "clicks";
 
@@ -46,15 +39,14 @@ public class StepFragmentSample extends ButterKnifeFragment implements Step {
 
 //    @Bind(R.id.button)
 //    Button button;
-    @Bind(R.id.editText100)
-    EditText editText100;
+
     @Nullable
     private OnNavigationBarListener onNavigationBarListener;
 
-    public static StepFragmentSample newInstance(@LayoutRes int layoutResId) {
+    public static StepFragmentSample2 newInstance(@LayoutRes int layoutResId) {
         Bundle args = new Bundle();
         args.putInt(LAYOUT_RESOURCE_ID_ARG_KEY, layoutResId);
-        StepFragmentSample fragment = new StepFragmentSample();
+        StepFragmentSample2 fragment = new StepFragmentSample2();
         fragment.setArguments(args);
         return fragment;
     }
@@ -93,16 +85,10 @@ public class StepFragmentSample extends ButterKnifeFragment implements Step {
 
     @Override
     public VerificationError verifyStep() {
-        return checkValue() ? null : new VerificationError("Click more times!");
+        return checkValue() ? null : new VerificationError("Click " + (TAP_THRESHOLD - i) + " more times!");
     }
     private boolean checkValue(){
-        String a = editText100.getText().toString();
-        if(a.equals("aa")){
-            return false;
-        }
-        else{
-            return true;
-        }
+        return true;
     }
     private boolean isAboveThreshold() {
         return i >= TAP_THRESHOLD;
