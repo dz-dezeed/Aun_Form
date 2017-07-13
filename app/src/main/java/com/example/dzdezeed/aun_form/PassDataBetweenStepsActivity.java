@@ -1,5 +1,5 @@
 /*
-Copyright 2016 StepStone Services
+Copyright 2017 StepStone Services
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -17,50 +17,46 @@ limitations under the License.
 package com.example.dzdezeed.aun_form;
 
 import android.os.Bundle;
-import android.support.annotation.LayoutRes;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
-import android.view.View;
-import android.widget.EditText;
 import android.widget.Toast;
 
 import com.stepstone.stepper.StepperLayout;
+import com .example.dzdezeed.aun_form.adapter.PassDataBetweenStepsFragmentStepAdapter;
 import com.stepstone.stepper.VerificationError;
-import com.example.dzdezeed.aun_form.adapter.SampleFragmentStepAdapter;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public abstract class AbstractStepperActivity extends AppCompatActivity implements StepperLayout.StepperListener,
-        OnNavigationBarListener {
+public class PassDataBetweenStepsActivity extends AppCompatActivity implements DataManager {
 
     private static final String CURRENT_STEP_POSITION_KEY = "position";
-    public String a ;
+
+    private static final String DATA = "data";
 
     @Bind(R.id.stepperLayout)
-    protected StepperLayout mStepperLayout;
-    //@Bind(R.id.editText100)
-    //protected EditText editText100 = (EditText) findViewById(R.id.editText100);
+    StepperLayout mStepperLayout;
+    private String Object_Data;
+    private String mData;
+    private String mData2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setTitle("Stepper sample");
 
-        setContentView(getLayoutResId());
-
+        setContentView(R.layout.activity_styled_tabs);
         ButterKnife.bind(this);
         int startingStepPosition = savedInstanceState != null ? savedInstanceState.getInt(CURRENT_STEP_POSITION_KEY) : 0;
-        mStepperLayout.setAdapter(new SampleFragmentStepAdapter(getSupportFragmentManager(), this), startingStepPosition);
-        mStepperLayout.setListener(this);
+        mData = savedInstanceState != null ? savedInstanceState.getString(DATA) : null;
+        mData2 = savedInstanceState != null ? savedInstanceState.getString(DATA) : null;
+        Object_Data = getIntent().getStringExtra("person");
+        mStepperLayout.setAdapter(new PassDataBetweenStepsFragmentStepAdapter(getSupportFragmentManager(), this), startingStepPosition);
     }
-
-    @LayoutRes
-    protected abstract int getLayoutResId();
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         outState.putInt(CURRENT_STEP_POSITION_KEY, mStepperLayout.getCurrentStepPosition());
+        outState.putString(DATA, mData);
         super.onSaveInstanceState(outState);
     }
 
@@ -75,31 +71,26 @@ public abstract class AbstractStepperActivity extends AppCompatActivity implemen
     }
 
     @Override
-    public void onCompleted(View completeButton) {
-        //Log.e(editText100.getText().toString(), "onCompleted: ");
-        Toast.makeText(this,"onComplete", Toast.LENGTH_SHORT).show();
+    public void saveData(String data) {
+        mData = data;
     }
 
-    @Override
-    public void onError(VerificationError verificationError) {
-        Toast.makeText(this, "onError! -> " + verificationError.getErrorMessage(), Toast.LENGTH_SHORT).show();
+    public String getData() {
+        return mData;
     }
 
-    @Override
-    public void onStepSelected(int newStepPosition) {
-
-        Toast.makeText(this, "onStepSelected! -> " + newStepPosition, Toast.LENGTH_SHORT).show();
+    public void saveData2(String data) {
+        mData2 = data;
     }
 
-    @Override
-    public void onReturn() {
-        finish();
+    public String getData2() {
+        return mData2;
     }
-
-    @Override
-    public void onChangeEndButtonsEnabled(boolean enabled) {
-        mStepperLayout.setNextButtonVerificationFailed(!enabled);
-        mStepperLayout.setCompleteButtonVerificationFailed(!enabled);
+    public void saveData1(String data){
+        Object_Data = data;
+    }
+    public String getData1(){
+        return Object_Data;
     }
 
 }

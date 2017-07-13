@@ -20,6 +20,7 @@
         <activity android:name=".Menu_Activity" />
         <activity android:name=".History_Activity" />
         <activity android:name=".AddUpdateUser_Activity"></activity>
+        <activity android:name=".PassDataBetweenStepsActivity"></activity>
     </application>
 
 </manifest>

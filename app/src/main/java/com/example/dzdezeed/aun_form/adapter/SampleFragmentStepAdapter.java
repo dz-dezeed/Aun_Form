@@ -38,14 +38,14 @@ public class SampleFragmentStepAdapter extends AbstractFragmentStepAdapter {
                 return StepFragmentSample.newInstance(R.layout.fragment_step);
             case 1:
                 return StepFragmentSample2.newInstance(R.layout.fragment_step2);
-            case 2:
-                return StepFragmentSample3.newInstance(R.layout.fragment_step3);
-            case 3:
-                return StepFragmentSample4.newInstance(R.layout.fragment_step4);
-            case 4:
-                return StepFragmentSample5.newInstance(R.layout.fragment_step5);
-            case 5:
-                return StepFragmentSample6.newInstance(R.layout.fragment_step6);
+//            case 2:
+//                return StepFragmentSample3.newInstance(R.layout.fragment_step3);
+//            case 3:
+//                return StepFragmentSample4.newInstance(R.layout.fragment_step4);
+//            case 4:
+//                return StepFragmentSample5.newInstance(R.layout.fragment_step5);
+//            case 5:
+//                return StepFragmentSample6.newInstance(R.layout.fragment_step6);
             default:
                 throw new IllegalArgumentException("Unsupported position: " + position);
         }
@@ -53,6 +53,6 @@ public class SampleFragmentStepAdapter extends AbstractFragmentStepAdapter {
 
     @Override
     public int getCount() {
-        return 6;
+        return 2;
     }
 }

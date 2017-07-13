@@ -19,7 +19,7 @@
 
             <EditText
                 android:id="@+id/editText100"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentLeft="true"
@@ -29,6 +29,18 @@
                 android:layout_marginStart="21dp"
                 android:ems="10"
                 android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/editText102"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:layout_above="@+id/editText100"
+                android:layout_alignLeft="@+id/editText100"
+                android:layout_alignStart="@+id/editText100" />
+
         </RelativeLayout>
     </FrameLayout>
 

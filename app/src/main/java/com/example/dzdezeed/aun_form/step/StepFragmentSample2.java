@@ -21,11 +21,18 @@ import android.os.Bundle;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
 
+import com.example.dzdezeed.aun_form.DataManager;
 import com.example.dzdezeed.aun_form.OnNavigationBarListener;
+import com.example.dzdezeed.aun_form.R;
 import com.stepstone.stepper.Step;
 import com.stepstone.stepper.VerificationError;
+
+import butterknife.Bind;
 
 public class StepFragmentSample2 extends ButterKnifeFragment implements Step {
 
@@ -37,8 +44,14 @@ public class StepFragmentSample2 extends ButterKnifeFragment implements Step {
 
     private int i = 0;
 
+    Bundle bundle2 = new Bundle();
+
 //    @Bind(R.id.button)
 //    Button button;
+//    @Bind(R.id.editText100)
+//    EditText editText100;
+    @Bind(R.id.textView3)
+    TextView textView3;
 
     @Nullable
     private OnNavigationBarListener onNavigationBarListener;
@@ -96,6 +109,7 @@ public class StepFragmentSample2 extends ButterKnifeFragment implements Step {
 
     @Override
     public void onSelected() {
+       // textView3.setText(editText100.getText().toString());
         updateNavigationBar();
     }
 

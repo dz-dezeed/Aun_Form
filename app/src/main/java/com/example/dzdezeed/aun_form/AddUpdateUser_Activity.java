@@ -8,6 +8,7 @@ import android.widget.Button;
 
 public class AddUpdateUser_Activity extends AppCompatActivity {
     protected Button BOk;
+    String person = "You are in my heart forever.";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,7 +20,8 @@ public class AddUpdateUser_Activity extends AppCompatActivity {
         BOk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(AddUpdateUser_Activity.this,StyledTabsActivity.class);
+                Intent intent = new Intent(AddUpdateUser_Activity.this,PassDataBetweenStepsActivity.class);
+                intent.putExtra("person", person);
                 startActivity(intent);
             }
         });

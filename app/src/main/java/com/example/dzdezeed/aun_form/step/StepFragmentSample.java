@@ -22,19 +22,24 @@ import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.text.Html;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.example.dzdezeed.aun_form.AbstractStepperActivity;
+import com.example.dzdezeed.aun_form.DataManager;
 import com.example.dzdezeed.aun_form.R;
+import com.stepstone.stepper.BlockingStep;
 import com.stepstone.stepper.Step;
+import com.stepstone.stepper.StepperLayout;
 import com.stepstone.stepper.VerificationError;
 import com.example.dzdezeed.aun_form.OnNavigationBarListener;
 
 import butterknife.Bind;
 
-public class StepFragmentSample extends ButterKnifeFragment implements Step {
+public class StepFragmentSample extends ButterKnifeFragment implements Step{
 
     private static final String CLICKS_KEY = "clicks";
 
@@ -43,6 +48,8 @@ public class StepFragmentSample extends ButterKnifeFragment implements Step {
     private static final String LAYOUT_RESOURCE_ID_ARG_KEY = "messageResourceId";
 
     private int i = 0;
+
+    private String a;
 
 //    @Bind(R.id.button)
 //    Button button;
@@ -88,6 +95,7 @@ public class StepFragmentSample extends ButterKnifeFragment implements Step {
 
     @Override
     protected int getLayoutResId() {
+        //return R.layout.fragment_step;
         return getArguments().getInt(LAYOUT_RESOURCE_ID_ARG_KEY);
     }
 
@@ -96,11 +104,13 @@ public class StepFragmentSample extends ButterKnifeFragment implements Step {
         return checkValue() ? null : new VerificationError("Click more times!");
     }
     private boolean checkValue(){
-        String a = editText100.getText().toString();
+        a = editText100.getText().toString();
         if(a.equals("aa")){
+            Log.e("AA", a.toString());
             return false;
         }
         else{
+            Log.e("Other", a.toString());
             return true;
         }
     }
@@ -110,6 +120,7 @@ public class StepFragmentSample extends ButterKnifeFragment implements Step {
 
     @Override
     public void onSelected() {
+
         updateNavigationBar();
     }
 
@@ -129,5 +140,6 @@ public class StepFragmentSample extends ButterKnifeFragment implements Step {
         outState.putInt(CLICKS_KEY, i);
         super.onSaveInstanceState(outState);
     }
+
 
 }
